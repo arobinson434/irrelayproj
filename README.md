@@ -12,5 +12,5 @@ make BR2_EXTERNAL=<path_to_this_project> rpiz2w_irrelay_defconfig
 
 After that, you should be good to go!
 
-Note, you may want to rename the `PSK` file in `board/rootfs_overlay/var/lib/iwd/`
-so that the board will auto connect to your WiFi.
+Note, you may want to add a `PSK` file in `board/rootfs_overlay/var/lib/iwd/` so
+that the board will auto connect to your WiFi.
