@@ -20,14 +20,14 @@ endef
 define SSD1306_OLED_RPI_INSTALL_STAGING_CMDS
 	$(INSTALL) -D -m 0644 $(@D)/include/SSD1306_OLED*.hpp $(STAGING_DIR)/usr/include/
 	$(INSTALL) -D -m 0755 $(@D)/libSSD1306_OLED_RPI.so.1.0 $(STAGING_DIR)/usr/lib/
-	ln -sf $(STAGING_DIR)/usr/lib/libSSD1306_OLED_RPI.so.1.0 $(STAGING_DIR)/usr/lib/libSSD1306_OLED_RPI.so.1
-	ln -sf $(STAGING_DIR)/usr/lib/libSSD1306_OLED_RPI.so.1.0 $(STAGING_DIR)/usr/lib/libSSD1306_OLED_RPI.so
+	ln -sf libSSD1306_OLED_RPI.so.1.0 $(STAGING_DIR)/usr/lib/libSSD1306_OLED_RPI.so.1
+	ln -sf libSSD1306_OLED_RPI.so.1.0 $(STAGING_DIR)/usr/lib/libSSD1306_OLED_RPI.so
 endef
 
 define SSD1306_OLED_RPI_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/libSSD1306_OLED_RPI.so.1.0 $(TARGET_DIR)/usr/lib/
-	ln -sf $(TARGET_DIR)/usr/lib/libSSD1306_OLED_RPI.so.1.0 $(TARGET_DIR)/usr/lib/libSSD1306_OLED_RPI.so.1
-	ln -sf $(TARGET_DIR)/usr/lib/libSSD1306_OLED_RPI.so.1.0 $(TARGET_DIR)/usr/lib/libSSD1306_OLED_RPI.so
+	ln -sf libSSD1306_OLED_RPI.so.1.0 $(TARGET_DIR)/usr/lib/libSSD1306_OLED_RPI.so.1
+	ln -sf libSSD1306_OLED_RPI.so.1.0 $(TARGET_DIR)/usr/lib/libSSD1306_OLED_RPI.so
 endef
 
 $(eval $(generic-package))
